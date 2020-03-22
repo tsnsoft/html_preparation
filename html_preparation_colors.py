@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Первичная подготовка html-файлов для Молитвослова"""
+"""Вторичная подготовка html-файлов"""
 import os
 
 
@@ -16,17 +16,11 @@ def scan_directory(scan_dir, scan_ext):
 
 
 def modify_file(file):
-    """Модификация html-файла для использования в Молитвослове"""
+    """Модификация html-файла"""
     color1 = "009933"
     color2 = "009999"
     color3 = "e8aa00"
-    my_dict = {"Слава Тебе,": color1, "Слава Твоей": color1, "И ныне": color2,
-               "Радуйся": color3, "Радуйтесь": color3,
-               "Ра́дуйтесь": color3, "Сын Божий": color1,
-               "Помилуй меня,": color1, "Господи, Помилуй": color1,
-               "Иисусе": color1, "Иисусе Боже": color1, "Христе": color1,
-               "Бога Отца": color1,
-               "Слава": color1}
+    my_dict = {"Слава Тебе,": color1, "И ныне": color2, "Радуйся": color3}
     try:
         with open(file, 'r+', encoding='cp1251') as file_handler:
             lines = file_handler.read()
@@ -44,7 +38,7 @@ def modify_file(file):
 
 def run():
     current_dir = os.path.abspath(os.curdir)
-    html_directory = os.path.join(current_dir, 'HTML')
+    html_directory = os.path.join(current_dir, 'src/main/assets/HTM')
 
     htm_files = scan_directory(html_directory, (".htm"))
 
