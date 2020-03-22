@@ -35,7 +35,7 @@ def modify_file(file):
             lines = lines.replace('"Verdana","sans-serif"', 'mp_font')
             file_handler.seek(0)
             file_handler.write(lines)
-            file_handler.truncate(len(lines))
+            file_handler.truncate()
             print("Обработан файл:", file)
     except Exception as e:
         print(e)
