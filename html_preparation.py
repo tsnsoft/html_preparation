@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Первичная подготовка html-файлов для myprayers"""
+"""Первичная подготовка html-файлов"""
 import os
 
 
