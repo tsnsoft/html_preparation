@@ -16,7 +16,7 @@ def scan_directory(scan_dir, scan_ext):
 
 
 def modify_file(file):
-    """Модификация html-файла для использования в myprayers"""
+    """Модификация html-файла"""
     repl1 = ('background:white', 'background:#FABF8F', 'background:#FFCC99', 'background:#B6DDE8',
              'background:yellow')
     repl2 = ('font-family:Cambria;', 'font-family:Verdana;', 'font-family:"Cambria","serif";',
